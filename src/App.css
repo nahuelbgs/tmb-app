@@ -19,8 +19,18 @@
   border-radius: 15px;
 }
 
-.tmb-h1 {
-  font-size: 24px;
+.tmb-p {
+  text-align: center;
+  font-size: 28px;
+  width: 80%;
+}
+
+.tmb-span{
+  font-weight: 700;
+}
+
+.tmb-important-container{
+  text-align: center;
 }
 
 .container-genero {

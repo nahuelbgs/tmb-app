@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import "./App.css";
-import "./Components/circularProgressBar/react-circular-progressbar/dist/styles.css";
 
 function App() {
   const [hombre, setHombre] = useState(false);
@@ -64,14 +63,13 @@ function App() {
             activity
         )
       );
-    }
-    else{
+    } else {
       Swal.fire({
-        title: 'Error!',
-        text: 'Debes seleccionar el género',
-        icon: 'error',
-        confirmButtonText: 'Entendido'
-      })
+        title: "Error!",
+        text: "Debes seleccionar el género",
+        icon: "error",
+        confirmButtonText: "Entendido",
+      });
     }
   };
   const handleBack = (e) => {
@@ -151,13 +149,14 @@ function App() {
       ) : (
         <section className="app-section">
           <div className="container">
-          <h1 className="tmb-h1">Tu tasa metabólica basal</h1>
-            <CircularProgressbar
-              value={tmb}
-              minValue={1126.8}
-              maxValue={4726.25}
-              text={tmb}
-            />
+          <div className="tmb-important-container">
+              <h2 className="tmb-important">IMPORTANTE</h2>
+              <p className="tmb-important-p">
+                Esta información brinda un diagnóstico del momento, no debe
+                usarse para efectos de seguimiento nutricional.
+              </p>
+            </div>
+            <p className="tmb-p">Tu tasa metabólica basal es: <span className="tmb-span">{tmb}</span></p>
             <button onClick={handleBack} className="button-calcular">
               ATRAS
             </button>
